@@ -1,4 +1,4 @@
-# karkinos_test
+# Flutter Chat Bot
 
 A new Flutter project.
 
