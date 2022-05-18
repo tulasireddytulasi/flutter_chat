@@ -13,6 +13,8 @@
           "No",
           "Don't Know"
         ],
+        "selectedOptionsIndex": [],
+        "answer": null,
         "option_key": [
           "yes",
           "no",
@@ -36,6 +38,8 @@
           "Lung cancer",
           "Other cancer"
         ],
+        "selectedOptionsIndex": [],
+        "answer": null,
         "option_key": [
           "breast",
           "cervical",
@@ -55,8 +59,7 @@
         ],
         "last_question": false
       },
-
-      "family_history_of_cancers_among__first_degree_relatives": {
+      "family_history_of_cancers_among_first_degree_relatives": {
         "question_id": "family_history_of_cancers_among_first_degree_relatives",
         "question": "Does anyone in your family have/had cancer? (mother, father, brothers, sisters, son, daughter, uncle, aunt)",
         "options": [
@@ -65,6 +68,8 @@
           "More than one",
           "Unknown"
         ],
+        "selectedOptionsIndex": [],
+        "answer": null,
         "option_key": [
           "none",
           "one",
@@ -90,6 +95,8 @@
           "Prostate cancer",
           "Other cancer"
         ],
+        "selectedOptionsIndex": [],
+        "answer": null,
         "option_key": [
           "breast",
           "colon_cancer",
@@ -105,7 +112,6 @@
         ],
         "last_question": false
       },
-
       "are_you_diabetic": {
         "question_id": "are_you_diabetic",
         "question": "Do you have diabetes? (High blood sugar)",
@@ -114,6 +120,8 @@
           "No",
           "Don't Know"
         ],
+        "selectedOptionsIndex": [],
+        "answer": null,
         "option_key": [
           "yes",
           "no",
@@ -135,6 +143,8 @@
           "No",
           "Don't Know"
         ],
+        "selectedOptionsIndex": [],
+        "answer": null,
         "option_key": [
           "yes",
           "no",
@@ -156,6 +166,8 @@
           "No",
           "Don't Know"
         ],
+        "selectedOptionsIndex": [],
+        "answer": null,
         "option_key": [
           "yes",
           "no",
@@ -177,6 +189,8 @@
           "No",
           "Don't Know"
         ],
+        "selectedOptionsIndex": [],
+        "answer": null,
         "option_key": [
           "yes",
           "no",
@@ -198,6 +212,8 @@
         "question_id": "height",
         "question": "Height in cms",
         "options": null,
+        "selectedOptionsIndex": [],
+        "answer": null,
         "option_key": null,
         "type": "TextField",
         "next_question_id": [
@@ -209,6 +225,8 @@
         "question_id": "weight",
         "question": "Weight in kgs",
         "options": null,
+        "selectedOptionsIndex": [],
+        "answer": null,
         "option_key": null,
         "type": "TextField",
         "next_question_id": [
@@ -223,6 +241,8 @@
           "Yes",
           "No"
         ],
+        "selectedOptionsIndex": [],
+        "answer": null,
         "option_key": [
           "yes",
           "no"
@@ -242,6 +262,8 @@
           "Daily",
           "Occasional"
         ],
+        "selectedOptionsIndex": [],
+        "answer": null,
         "option_key": [
           "never",
           "daily",
@@ -263,6 +285,8 @@
           "Daily",
           "Occasional"
         ],
+        "selectedOptionsIndex": [],
+        "answer": null,
         "option_key": [
           "never",
           "daily",
@@ -284,6 +308,8 @@
           "Daily",
           "Occasional"
         ],
+        "selectedOptionsIndex": [],
+        "answer": null,
         "option_key": [
           "never",
           "daily",
@@ -305,6 +331,8 @@
           "No",
           "Don't Know"
         ],
+        "selectedOptionsIndex": [],
+        "answer": null,
         "option_key": [
           "yes",
           "no",

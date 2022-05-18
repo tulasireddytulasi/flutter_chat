@@ -4,15 +4,16 @@ part 'questionnaires_model_db.g.dart';
 
 @HiveType(typeId: 1)
 class QuestionnairesModelDB extends HiveObject {
-  QuestionnairesModelDB({
-    required this.question_id,
-    required this.question,
-    required this.options,
-    required this.option_key,
-    required this.type,
-    required this.next_question_id,
-    required this.last_question,
-  });
+  QuestionnairesModelDB(
+      {required this.question_id,
+      required this.question,
+      required this.options,
+      required this.option_key,
+      required this.type,
+      required this.next_question_id,
+      required this.last_question,
+      required this.selectedOptionsIndex,
+      required this.answer});
 
   @HiveField(0)
   String question_id;
@@ -35,8 +36,9 @@ class QuestionnairesModelDB extends HiveObject {
   @HiveField(6)
   bool last_question;
 
-  // @override
-  // String toString() {
-  //   return '$question_id: $question';
-  // }
+  @HiveField(7)
+  List<String> selectedOptionsIndex;
+
+  @HiveField(8)
+  String answer;
 }

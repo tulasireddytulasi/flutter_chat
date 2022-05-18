@@ -22,6 +22,18 @@ class ChipOptions extends StatefulWidget {
 }
 
 class _ChipOptionsState extends State<ChipOptions> {
+  bool isTapped = true;
+  Map thankYou = {
+    "question_id": "thank_you",
+    "question": "Thank you for taking assessment.",
+    "options": null,
+    "selectedOptionsIndex": [],
+    "answer": null,
+    "option_key": null,
+    "type": null,
+    "next_question_id": null,
+    "last_question": null
+  };
   @override
   Widget build(BuildContext context) {
     return Consumer<ChatBotProvider>(builder: (context, provider, child) {
@@ -61,14 +73,34 @@ class _ChipOptionsState extends State<ChipOptions> {
         alignment: chipOptions.length > 4 ? null : Alignment.topRight,
         child: GestureDetector(
           onTap: () {
-            log(chipOptions[index]);
-            log(nextQuestionIds[index]);
-            log(isLastQuestion.toString());
-            Map map = {};
-            log("Data5: ${chatBotProvider.questionnairesMap[nextQuestionIds[index]]}\n");
-            map = chatBotProvider.questionnairesMap[nextQuestionIds[index]];
-            // log("Data5: ${chatBotProvider.questionnairesMap}");
-            chatBotProvider.addDisplayQuestionsMap(maps: map);
+            if (isTapped) {
+              // isTapped = false;
+              log(chipOptions[index]);
+              log(isLastQuestion.toString());
+              // if (nextQuestionIds.isNotEmpty) {
+              log("List: ${chatBotProvider.displayQuestionsMapList}\n\n");
+              chatBotProvider.displayQuestionsMapList[0]
+                  ["selectedOptionsIndex"] = [index];
+              chatBotProvider.displayQuestionsMapList[0]["answer"] =
+                  chipOptions[index];
+              log("List: ${chatBotProvider.displayQuestionsMapList}\n\n");
+              Map map = {};
+              // log("Data5: ${chatBotProvider.questionnairesMap}");
+              if (isLastQuestion) {
+                log("isLastQuestion: $isLastQuestion");
+                chatBotProvider.addDisplayQuestionsMapList(maps: thankYou);
+              } else {
+                if (nextQuestionIds.isNotEmpty) {
+                  log(nextQuestionIds[index]);
+                  log("Data5: ${chatBotProvider.questionnairesMap[nextQuestionIds[index]]}\n");
+                  map =
+                      chatBotProvider.questionnairesMap[nextQuestionIds[index]];
+                  log("isLastQuestion 7: $isLastQuestion");
+                  chatBotProvider.addDisplayQuestionsMapList(maps: map);
+                }
+              }
+              //  }
+            }
           },
           child: Container(
             padding:

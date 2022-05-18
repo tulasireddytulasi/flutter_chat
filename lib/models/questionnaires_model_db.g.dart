@@ -24,13 +24,15 @@ class QuestionnairesModelDBAdapter extends TypeAdapter<QuestionnairesModelDB> {
       type: fields[4] as String,
       next_question_id: (fields[5] as List).cast<String>(),
       last_question: fields[6] as bool,
+      selectedOptionsIndex: (fields[7] as List).cast<String>(),
+      answer: fields[8] as String,
     );
   }
 
   @override
   void write(BinaryWriter writer, QuestionnairesModelDB obj) {
     writer
-      ..writeByte(7)
+      ..writeByte(9)
       ..writeByte(0)
       ..write(obj.question_id)
       ..writeByte(1)
@@ -44,7 +46,11 @@ class QuestionnairesModelDBAdapter extends TypeAdapter<QuestionnairesModelDB> {
       ..writeByte(5)
       ..write(obj.next_question_id)
       ..writeByte(6)
-      ..write(obj.last_question);
+      ..write(obj.last_question)
+      ..writeByte(7)
+      ..write(obj.selectedOptionsIndex)
+      ..writeByte(8)
+      ..write(obj.answer);
   }
 
   @override
